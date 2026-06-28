@@ -11,9 +11,7 @@
     --putih: #FFFFFF;
     --emas: #F5C842;
     --gelap: #0D0D0D;
-    --krem: #FFF8EE;
     --merah-gelap: #8B0000;
-    --abu: #F0EDE8;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,11 +45,7 @@
   }
   .flag-bg-merah { background: var(--merah); }
   .flag-bg-putih { background: #ffffff; }
-  .confetti {
-    position: absolute; inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-  }
+  .confetti { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
   .dot {
     position: absolute;
     border-radius: 50%;
@@ -59,7 +53,7 @@
     opacity: 0.6;
   }
   @keyframes fall {
-    0% { transform: translateY(-60px) rotate(0deg); opacity: 0.8; }
+    0%   { transform: translateY(-60px) rotate(0deg); opacity: 0.8; }
     100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
   }
   .hero-eyebrow {
@@ -100,7 +94,7 @@
   .bintang-hias:nth-child(3) { bottom: 0; left: 10px; animation-delay: 1.1s; font-size: 1rem; }
   @keyframes twinkle {
     from { opacity: 0.3; transform: scale(0.8); }
-    to   { opacity: 1; transform: scale(1.2); }
+    to   { opacity: 1;   transform: scale(1.2); }
   }
   .hero-subtitle {
     font-size: clamp(0.85rem, 2.5vw, 1.1rem);
@@ -136,11 +130,7 @@
     display: block;
     margin-bottom: 0.25rem;
   }
-  .date-val {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.05em;
-  }
+  .date-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.05em; }
   .cta-btn {
     display: inline-block;
     background: var(--merah);
@@ -152,14 +142,10 @@
     padding: 0.9rem 2.2rem;
     border-radius: 50px;
     text-decoration: none;
-    position: relative;
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 30px rgba(204,0,1,0.4);
   }
-  .cta-btn:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 8px 40px rgba(204,0,1,0.6);
-  }
+  .cta-btn:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 8px 40px rgba(204,0,1,0.6); }
   .scroll-hint {
     position: absolute;
     bottom: 2rem;
@@ -207,12 +193,7 @@
 
   /* ─── TENTANG ───────────────────────────────────── */
   #tentang { background: linear-gradient(180deg, #0D0D0D 0%, #1a0505 100%); }
-  .tentang-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-  }
+  .tentang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
   .stat-card {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
@@ -252,12 +233,7 @@
   .tentang-text strong { color: var(--putih); }
 
   /* ─── TEMA ──────────────────────────────────────── */
-  #tema {
-    background: var(--merah);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
+  #tema { background: var(--merah); text-align: center; position: relative; overflow: hidden; }
   #tema::before {
     content: '🇮🇩';
     position: absolute;
@@ -367,14 +343,12 @@
 
   /* ─── PANITIA ───────────────────────────────────── */
   #panitia { background: linear-gradient(180deg, #1a0505 0%, #0D0D0D 100%); }
-
   .foto-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
     gap: 1rem;
     margin-bottom: 2.5rem;
   }
-
   .foto-card {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
@@ -394,22 +368,12 @@
     opacity: 0;
     transition: opacity 0.25s;
   }
-  .foto-card:hover {
-    border-color: rgba(245,200,66,0.35);
-    background: rgba(245,200,66,0.05);
-    transform: translateY(-5px);
-  }
+  .foto-card:hover { border-color: rgba(245,200,66,0.35); background: rgba(245,200,66,0.05); transform: translateY(-5px); }
   .foto-card:hover::before { opacity: 1; }
-
-  .foto-card.ketua {
-    border-color: rgba(245,200,66,0.35);
-    background: rgba(245,200,66,0.06);
-  }
+  .foto-card.ketua { border-color: rgba(245,200,66,0.35); background: rgba(245,200,66,0.06); }
   .foto-card.ketua::before { opacity: 1; }
-
   .foto-wrap {
-    width: 72px;
-    height: 72px;
+    width: 72px; height: 72px;
     border-radius: 50%;
     margin: 0 auto 0.9rem;
     overflow: hidden;
@@ -418,46 +382,19 @@
     transition: border-color 0.25s;
   }
   .foto-card.ketua .foto-wrap {
-    width: 80px;
-    height: 80px;
+    width: 80px; height: 80px;
     border-color: #F5C842;
     box-shadow: 0 0 20px rgba(245,200,66,0.3);
   }
   .foto-card:hover .foto-wrap { border-color: rgba(245,200,66,0.55); }
   .foto-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-  .foto-name {
-    font-weight: 700;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.92);
-    line-height: 1.3;
-    margin-bottom: 0.3rem;
-  }
+  .foto-name { font-weight: 700; font-size: 0.78rem; color: rgba(255,255,255,0.92); line-height: 1.3; margin-bottom: 0.3rem; }
   .foto-card.ketua .foto-name { color: #fff; font-size: 0.82rem; }
-
-  .foto-role {
-    font-size: 0.65rem;
-    color: rgba(255,255,255,0.4);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+  .foto-role { font-size: 0.65rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; }
   .foto-card.ketua .foto-role { color: #F5C842; }
-
-  .anggota-divider {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 0.5rem 0 1.5rem;
-  }
+  .anggota-divider { display: flex; align-items: center; gap: 1rem; margin: 0.5rem 0 1.5rem; }
   .anggota-divider-line { flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
-  .anggota-divider-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.22em;
-    color: rgba(255,255,255,0.25);
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
+  .anggota-divider-label { font-size: 0.65rem; letter-spacing: 0.22em; color: rgba(255,255,255,0.25); text-transform: uppercase; white-space: nowrap; }
   .anggota-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .anggota-chip {
     background: rgba(255,255,255,0.05);
@@ -468,11 +405,7 @@
     color: rgba(255,255,255,0.7);
     transition: all 0.2s;
   }
-  .anggota-chip:hover {
-    background: rgba(204,0,1,0.1);
-    border-color: rgba(204,0,1,0.3);
-    color: rgba(255,255,255,0.9);
-  }
+  .anggota-chip:hover { background: rgba(204,0,1,0.1); border-color: rgba(204,0,1,0.3); color: rgba(255,255,255,0.9); }
 
   /* ─── FOOTER ────────────────────────────────────── */
   footer {
@@ -501,11 +434,7 @@
   }
 
   /* ─── ANIMATIONS ────────────────────────────────── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* ─── COUNTDOWN ─────────────────────────────────── */
@@ -535,13 +464,10 @@
     border-radius: 50px;
     padding: 0.6rem 1.1rem 0.6rem 0.6rem;
     backdrop-filter: blur(16px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(245,200,66,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
     transition: transform 0.2s, box-shadow 0.2s;
   }
-  .music-player:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(245,200,66,0.25);
-  }
+  .music-player:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.6); }
   .music-btn {
     width: 42px; height: 42px;
     border-radius: 50%;
@@ -561,19 +487,32 @@
   .music-label { font-size: 0.78rem; color: rgba(255,255,255,0.85); font-weight: 600; white-space: nowrap; }
   .music-bars { display: flex; align-items: flex-end; gap: 2px; height: 18px; margin-left: 0.4rem; }
   .music-bar {
-    width: 3px;
-    background: var(--emas);
-    border-radius: 2px;
+    width: 3px; background: var(--emas); border-radius: 2px;
     animation: bar-dance 0.6s ease-in-out infinite alternate;
     animation-play-state: paused;
   }
   #bar1 { height: 10px; animation-delay: 0s; }
   #bar2 { height: 18px; animation-delay: 0.15s; }
   #bar3 { height: 7px; animation-delay: 0.3s; }
-  @keyframes bar-dance {
-    from { transform: scaleY(0.3); }
-    to   { transform: scaleY(1); }
+  @keyframes bar-dance { from { transform: scaleY(0.3); } to { transform: scaleY(1); } }
+
+  /* ─── MUSIC STATUS ──────────────────────────────── */
+  .music-status {
+    display: none;
+    position: fixed;
+    bottom: 5.5rem;
+    right: 1.5rem;
+    z-index: 999;
+    background: rgba(10,10,10,0.95);
+    border: 1px solid rgba(245,200,66,0.25);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 240px;
+    line-height: 1.5;
   }
+  .music-status.show { display: block; }
 </style>
 </head>
 <body>
@@ -633,26 +572,12 @@
     <span class="section-label">Tentang Acara</span>
     <h2 class="section-title">Satu Semangat,<br>Satu Kampung</h2>
     <div class="divider"></div>
-
     <div class="tentang-grid">
-      <div class="stat-card">
-        <div class="stat-num">81</div>
-        <div class="stat-desc">Tahun kemerdekaan<br>Indonesia yang kita rayakan</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">11</div>
-        <div class="stat-desc">Lomba seru untuk anak-anak<br>dan ibu-ibu</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">2</div>
-        <div class="stat-desc">Hari penuh keseruan &<br>kebersamaan warga</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">1</div>
-        <div class="stat-desc">Malam pentas seni &<br>orgen tunggal spektakuler</div>
-      </div>
+      <div class="stat-card"><div class="stat-num">81</div><div class="stat-desc">Tahun kemerdekaan<br>Indonesia yang kita rayakan</div></div>
+      <div class="stat-card"><div class="stat-num">11</div><div class="stat-desc">Lomba seru untuk anak-anak<br>dan ibu-ibu</div></div>
+      <div class="stat-card"><div class="stat-num">2</div><div class="stat-desc">Hari penuh keseruan &<br>kebersamaan warga</div></div>
+      <div class="stat-card"><div class="stat-num">1</div><div class="stat-desc">Malam pentas seni &<br>orgen tunggal spektakuler</div></div>
     </div>
-
     <div class="tentang-text">
       Warga <strong>Timur Pasar (COMPAS)</strong>, Desa Petunjungan, bersatu menyelenggarakan perayaan kemerdekaan yang penuh makna. Berdasarkan musyawarah Generasi COMPAS, kegiatan ini bertujuan mempererat silaturahmi, menumbuhkan jiwa nasionalisme, dan merayakan jasa para pahlawan yang telah berjuang untuk tanah air kita tercinta.
     </div>
@@ -675,42 +600,17 @@
     <h2 class="section-title">Rundown Acara</h2>
     <div class="divider"></div>
     <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:0.5rem">📅 Minggu, 23 Agustus 2026 · Mulai pukul 07.00 WIB · Lingkungan Timur Pasar</p>
-
     <table class="rundown-table">
-      <thead>
-        <tr>
-          <th>Waktu</th>
-          <th>Kegiatan</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Waktu</th><th>Kegiatan</th></tr></thead>
       <tbody>
-        <tr>
-          <td><span class="waktu-badge">07.00 – 08.30</span></td>
-          <td>🎤 Registrasi peserta · Menyanyikan Lagu Indonesia Raya · Sambutan Ketua RT & Perwakilan Panitia</td>
-        </tr>
-        <tr>
-          <td><span class="waktu-badge">08.30 – 10.30</span></td>
-          <td>🏆 <strong>Lomba Anak-anak</strong> (7 lomba)</td>
-        </tr>
-        <tr>
-          <td><span class="waktu-badge">10.30 – 11.00</span></td>
-          <td>📊 Rekapan nilai lomba anak-anak</td>
-        </tr>
-        <tr>
-          <td><span class="waktu-badge">11.00 – 11.45</span></td>
-          <td>🎵 Hiburan — Karaoke seru!</td>
-        </tr>
-        <tr>
-          <td><span class="waktu-badge">11.45 – 13.00</span></td>
-          <td>🍽️ Istirahat & ISHOMA</td>
-        </tr>
-        <tr>
-          <td><span class="waktu-badge">13.00 – Selesai</span></td>
-          <td>🏆 <strong>Lomba Ibu-Ibu</strong> (5 lomba) · Rekapan Nilai · Pembacaan Hadiah · Bersih-bersih</td>
-        </tr>
+        <tr><td><span class="waktu-badge">07.00 – 08.30</span></td><td>🎤 Registrasi peserta · Menyanyikan Lagu Indonesia Raya · Sambutan Ketua RT & Perwakilan Panitia</td></tr>
+        <tr><td><span class="waktu-badge">08.30 – 10.30</span></td><td>🏆 <strong>Lomba Anak-anak</strong> (7 lomba)</td></tr>
+        <tr><td><span class="waktu-badge">10.30 – 11.00</span></td><td>📊 Rekapan nilai lomba anak-anak</td></tr>
+        <tr><td><span class="waktu-badge">11.00 – 11.45</span></td><td>🎵 Hiburan — Karaoke seru!</td></tr>
+        <tr><td><span class="waktu-badge">11.45 – 13.00</span></td><td>🍽️ Istirahat & ISHOMA</td></tr>
+        <tr><td><span class="waktu-badge">13.00 – Selesai</span></td><td>🏆 <strong>Lomba Ibu-Ibu</strong> (5 lomba) · Rekapan Nilai · Pembacaan Hadiah · Bersih-bersih</td></tr>
       </tbody>
     </table>
-
     <div style="margin-top:2rem;padding:1rem 1.3rem;background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.2);border-radius:12px;font-size:0.85rem;color:rgba(255,255,255,0.75);">
       🎭 <strong style="color:var(--emas)">Pentas Seni & Orgen Tunggal</strong> — Sabtu, 29 Agustus 2026 · Pukul 20.00–23.30 WIB · Lingkungan Timur Pasar
     </div>
@@ -723,12 +623,10 @@
     <span class="section-label">Cabang Perlombaan</span>
     <h2 class="section-title">Ayo Ikut Lomba!</h2>
     <div class="divider"></div>
-
     <div class="lomba-tabs">
       <button class="tab-btn active" onclick="switchTab('anak', this)">👦 Lomba Anak</button>
       <button class="tab-btn" onclick="switchTab('ibu', this)">👩 Lomba Ibu-ibu</button>
     </div>
-
     <div id="tab-anak" class="tab-content active">
       <div class="lomba-grid">
         <div class="lomba-card"><span class="lomba-icon">🍪</span><span class="lomba-name">Lomba Makan Biskuit</span></div>
@@ -740,7 +638,6 @@
         <div class="lomba-card"><span class="lomba-icon">🍘</span><span class="lomba-name">Lomba Makan Kerupuk</span></div>
       </div>
     </div>
-
     <div id="tab-ibu" class="tab-content">
       <div class="lomba-grid">
         <div class="lomba-card"><span class="lomba-icon">🎵</span><span class="lomba-name">Tiup Cup + Musik</span></div>
@@ -759,7 +656,6 @@
     <span class="section-label">Dua Hari Perayaan</span>
     <h2 class="section-title">Rangkaian Acara</h2>
     <div class="divider"></div>
-
     <div class="acara-cards">
       <div class="acara-card acara-card-1">
         <div class="acara-emoji">🏆</div>
@@ -830,6 +726,7 @@
 </footer>
 
 <!-- ─── FLOATING MUSIC PLAYER ─────────────────────── -->
+<div class="music-status" id="musicStatus"></div>
 <div class="music-player">
   <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="Putar / Stop Indonesia Raya">▶</button>
   <div class="music-info">
@@ -844,31 +741,23 @@
 </div>
 
 <script>
-  // ── CONFETTI ──────────────────────────────────────
+  /* ── CONFETTI ─────────────────────────────────────── */
   const colors = ['#CC0001','#F5C842','#ffffff','#ff6666','#ffe066'];
-  const confettiContainer = document.getElementById('confetti');
+  const confettiEl = document.getElementById('confetti');
   for (let i = 0; i < 50; i++) {
     const dot = document.createElement('div');
     dot.className = 'dot';
     const size = Math.random() * 8 + 4;
-    dot.style.cssText = `
-      width:${size}px;height:${size}px;
-      background:${colors[Math.floor(Math.random()*colors.length)]};
-      left:${Math.random()*100}%;
-      animation-duration:${Math.random()*8+5}s;
-      animation-delay:${Math.random()*8}s;
-    `;
-    confettiContainer.appendChild(dot);
+    dot.style.cssText = `width:${size}px;height:${size}px;background:${colors[Math.floor(Math.random()*colors.length)]};left:${Math.random()*100}%;animation-duration:${Math.random()*8+5}s;animation-delay:${Math.random()*8}s;`;
+    confettiEl.appendChild(dot);
   }
 
-  // ── COUNTDOWN ─────────────────────────────────────
+  /* ── COUNTDOWN ────────────────────────────────────── */
   function updateCountdown() {
     const target = new Date('2026-08-23T08:00:00+07:00');
-    const now = new Date();
-    const diff = target - now;
+    const diff = target - new Date();
     if (diff <= 0) {
-      document.getElementById('countdown').innerHTML =
-        '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:2rem;color:var(--emas)">🎉 HARI INI! SELAMAT MERAYAKAN!</div>';
+      document.getElementById('countdown').innerHTML = '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:2rem;color:var(--emas)">🎉 HARI INI! SELAMAT MERAYAKAN!</div>';
       return;
     }
     const d = Math.floor(diff / 86400000);
@@ -883,7 +772,7 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // ── TABS ──────────────────────────────────────────
+  /* ── TABS ─────────────────────────────────────────── */
   function switchTab(id, btn) {
     document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -891,69 +780,68 @@
     btn.classList.add('active');
   }
 
-  // ── SCROLL REVEAL ─────────────────────────────────
-  const reveals = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver((entries) => {
+  /* ── SCROLL REVEAL ────────────────────────────────── */
+  const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
-  reveals.forEach(r => obs.observe(r));
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
 
-  // ── PANITIA FOTO GRID ─────────────────────────────
+  /* ── PANITIA FOTO GRID ────────────────────────────── */
   const DEFAULT_AVA = 'https://api.dicebear.com/9.x/initials/svg?backgroundType=gradientLinear&backgroundColor=CC0001,8B0000&textColor=ffffff&fontSize=38&fontWeight=700&chars=1&seed=';
-
   const panitiaData = [
-    { name: 'Sunil Rizki Julianto', role: '👑 Ketua Panitia',       foto: null,                                                                           ketua: true },
-    { name: 'Alfin Imam Persada',   role: '🤝 Wakil Ketua',          foto: 'https://lh3.googleusercontent.com/d/1lK07Iv2iU6sAqwFeTctIYvltN38M0YOE=w400' },
-    { name: 'Salsa Putri Marnani',  role: '📝 Sekretaris I',         foto: 'https://lh3.googleusercontent.com/d/1lEiHEiDKTyexlGyxzbyo_pxBKs7cj_Ty=w400?authuser=0' },
-    { name: 'Fathurrohman S.',      role: '📝 Sekretaris II',        foto: 'https://lh3.googleusercontent.com/d/1Y9v0QgxlpKSG9C9aK33tEp38G1zTgMF-=w400?authuser=0' },
-    { name: 'Dinda Fatimah',        role: '💰 Bendahara I',          foto: 'https://lh3.googleusercontent.com/d/1155QBkadiIIfhl9ErcjcyDW_C-fJHGno=w400?authuser=0' },
-    { name: 'Yeni',                 role: '💰 Bendahara II',         foto: null },
-    { name: 'Dalla Ruci',           role: '📸 Dokumentasi',          foto: 'https://lh3.googleusercontent.com/d/1RneMHOiivp9C5qnfbCrsYGxv3Kq2BNaT=w400?authuser=0' },
-    { name: 'Roger Danuarta',       role: '🔒 Keamanan',             foto: 'https://lh3.googleusercontent.com/d/1A8mAC5rR-9YNRygCXaCeLRVwUUERDxlH=w400?authuser=0' },
+    { name: 'Sunil Rizki Julianto', role: '👑 Ketua Panitia',  foto: null, ketua: true },
+    { name: 'Alfin Imam Persada',   role: '🤝 Wakil Ketua',    foto: 'https://lh3.googleusercontent.com/d/1lK07Iv2iU6sAqwFeTctIYvltN38M0YOE=w400' },
+    { name: 'Salsa Putri Marnani',  role: '📝 Sekretaris I',   foto: 'https://lh3.googleusercontent.com/d/1lEiHEiDKTyexlGyxzbyo_pxBKs7cj_Ty=w400' },
+    { name: 'Fathurrohman S.',      role: '📝 Sekretaris II',  foto: 'https://lh3.googleusercontent.com/d/1Y9v0QgxlpKSG9C9aK33tEp38G1zTgMF-=w400' },
+    { name: 'Dinda Fatimah',        role: '💰 Bendahara I',    foto: 'https://lh3.googleusercontent.com/d/1155QBkadiIIfhl9ErcjcyDW_C-fJHGno=w400' },
+    { name: 'Yeni',                 role: '💰 Bendahara II',   foto: null },
+    { name: 'Dalla Ruci',           role: '📸 Dokumentasi',    foto: 'https://lh3.googleusercontent.com/d/1RneMHOiivp9C5qnfbCrsYGxv3Kq2BNaT=w400' },
+    { name: 'Roger Danuarta',       role: '🔒 Keamanan',       foto: 'https://lh3.googleusercontent.com/d/1A8mAC5rR-9YNRygCXaCeLRVwUUERDxlH=w400' },
   ];
-
   const fotoGrid = document.getElementById('fotoGrid');
   panitiaData.forEach(p => {
     const card = document.createElement('div');
     card.className = 'foto-card' + (p.ketua ? ' ketua' : '');
     const src = p.foto || (DEFAULT_AVA + encodeURIComponent(p.name));
     const fallback = DEFAULT_AVA + encodeURIComponent(p.name);
-    card.innerHTML = `
-      <div class="foto-wrap">
-        <img src="${src}" alt="${p.name}" loading="lazy"
-             onerror="this.onerror=null;this.src='${fallback}'">
-      </div>
-      <div class="foto-name">${p.name}</div>
-      <div class="foto-role">${p.role}</div>
-    `;
+    card.innerHTML = `<div class="foto-wrap"><img src="${src}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}'"></div><div class="foto-name">${p.name}</div><div class="foto-role">${p.role}</div>`;
     fotoGrid.appendChild(card);
   });
 
-  // ── MUSIC PLAYER ──────────────────────────────────
-  const audio = new Audio('https://github.com/fasoleh7/compas/blob/main/YTMP3GG_YouTube_LAGU-INDONESIA-RAYA-TEXT-DAN-VOCAL-ORIGI_Media_UuPaS81n0xg_008_128k.mp3');
+  /* ── MUSIC PLAYER ────────────────────────────────────
+     File MP3 diletakkan SATU FOLDER dengan index.html
+     Nama file: YTMP3GG_YouTube_LAGU-INDONESIA-RAYA-TEXT-DAN-VOCAL-ORIGI_Media_UuPaS81n0xg_008_128k.mp3
+  ─────────────────────────────────────────────────── */
+  const NAMA_FILE_MP3 = 'YTMP3GG_YouTube_LAGU-INDONESIA-RAYA-TEXT-DAN-VOCAL-ORIGI_Media_UuPaS81n0xg_008_128k.mp3';
+
+  const audio = new Audio(NAMA_FILE_MP3);
   audio.preload = 'auto';
   let isPlaying = false;
 
-  audio.addEventListener('ended', () => { isPlaying = false; updatePlayerUI(false); });
-  audio.addEventListener('error', () => {
-    document.getElementById('music-label').textContent = 'Gagal memuat audio';
-  });
+  const btn   = document.getElementById('music-btn');
+  const label = document.getElementById('music-label');
+  const bars  = [document.getElementById('bar1'), document.getElementById('bar2'), document.getElementById('bar3')];
 
-  function updatePlayerUI(playing) {
-    const btn = document.getElementById('music-btn');
-    [document.getElementById('bar1'), document.getElementById('bar2'), document.getElementById('bar3')]
-      .forEach(b => b.style.animationPlayState = playing ? 'running' : 'paused');
-    btn.textContent = playing ? '⏸' : '▶';
-    document.getElementById('music-label').textContent = playing ? 'Sedang Diputar…' : 'Indonesia Raya';
+  function setPlaying(state) {
+    isPlaying = state;
+    btn.textContent = state ? '⏸' : '▶';
+    label.textContent = state ? 'Sedang Diputar…' : 'Indonesia Raya';
+    bars.forEach(b => b.style.animationPlayState = state ? 'running' : 'paused');
   }
+
+  audio.addEventListener('ended', () => setPlaying(false));
+  audio.addEventListener('error', () => {
+    label.textContent = '⚠️ File tidak ditemukan';
+  });
 
   function toggleMusic() {
     if (isPlaying) {
-      audio.pause(); isPlaying = false; updatePlayerUI(false);
+      audio.pause();
+      setPlaying(false);
     } else {
       audio.play()
-        .then(() => { isPlaying = true; updatePlayerUI(true); })
-        .catch(() => { document.getElementById('music-label').textContent = 'Klik lagi untuk memutar'; });
+        .then(() => setPlaying(true))
+        .catch(() => { label.textContent = 'Klik lagi untuk memutar'; });
     }
   }
 </script>
